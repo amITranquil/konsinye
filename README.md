@@ -99,6 +99,6 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 
 ## İletişim
 
-Sakın Burak Civelek - [@sakinburakcivelek](https://github.com/sakinburakcivelek)
+Sakın Burak Civelek - [@sakinburakcivelek](https://github.com/amITranquil)
 
 Proje Linki: [https://github.com/sakinburakcivelek/konsinye](https://github.com/sakinburakcivelek/konsinye)
