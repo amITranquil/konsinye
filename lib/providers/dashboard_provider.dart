@@ -7,6 +7,8 @@ class DashboardProvider with ChangeNotifier {
   double _totalPaid = 0.0;
   double _remainingDebt = 0.0;
   double _myProfit = 0.0;
+  double _inventoryValue = 0.0;
+  double _inventoryMyProfit = 0.0;
   bool _isLoading = false;
 
   double get totalRevenue => _totalRevenue;
@@ -14,6 +16,8 @@ class DashboardProvider with ChangeNotifier {
   double get totalPaid => _totalPaid;
   double get remainingDebt => _remainingDebt;
   double get myProfit => _myProfit;
+  double get inventoryValue => _inventoryValue;
+  double get inventoryMyProfit => _inventoryMyProfit;
   bool get isLoading => _isLoading;
 
   Future<void> loadStatistics() async {
@@ -26,6 +30,8 @@ class DashboardProvider with ChangeNotifier {
       _totalPaid = await DatabaseHelper.instance.getTotalPaymentsToOwner();
       _remainingDebt = await DatabaseHelper.instance.getRemainingDebtToOwner();
       _myProfit = await DatabaseHelper.instance.getTotalMyProfit();
+      _inventoryValue = await DatabaseHelper.instance.getTotalInventoryValue();
+      _inventoryMyProfit = await DatabaseHelper.instance.getTotalInventoryMyProfit();
     } catch (e) {
       debugPrint('Error loading statistics: $e');
     } finally {

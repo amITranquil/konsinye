@@ -115,6 +115,28 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   color: Colors.red,
                   isLarge: true,
                 ),
+                const SizedBox(height: 16),
+                Row(
+                  children: [
+                    Expanded(
+                      child: _SummaryCard(
+                        title: 'Elimdeki Ürün Değeri',
+                        amount: provider.inventoryValue,
+                        icon: Icons.inventory_2,
+                        color: Colors.indigo,
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: _SummaryCard(
+                        title: 'Stoktaki Kârım',
+                        amount: provider.inventoryMyProfit,
+                        icon: Icons.trending_up,
+                        color: Colors.teal,
+                      ),
+                    ),
+                  ],
+                ),
                 const SizedBox(height: 32),
                 // Hızlı Erişim Butonları
                 const Text(

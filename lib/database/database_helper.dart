@@ -250,6 +250,36 @@ class DatabaseHelper {
     return (result.first['total'] as num?)?.toDouble() ?? 0.0;
   }
 
+  // Elimdeki ürünlerin toplam değeri (maliyet + komşu kâr payı) * stok
+  Future<double> getTotalInventoryValue() async {
+    final db = await database;
+    final result = await db.rawQuery(
+      '''
+      SELECT SUM(
+        (cost_price + (cost_price * profit_percentage / 100 / 2)) * stock_quantity
+      ) as total
+      FROM products
+      WHERE stock_quantity > 0
+      ''',
+    );
+    return (result.first['total'] as num?)?.toDouble() ?? 0.0;
+  }
+
+  // Elimdeki ürünlerden benim kârım (benim kâr payım * stok)
+  Future<double> getTotalInventoryMyProfit() async {
+    final db = await database;
+    final result = await db.rawQuery(
+      '''
+      SELECT SUM(
+        (cost_price * profit_percentage / 100 / 2) * stock_quantity
+      ) as total
+      FROM products
+      WHERE stock_quantity > 0
+      ''',
+    );
+    return (result.first['total'] as num?)?.toDouble() ?? 0.0;
+  }
+
   Future<void> close() async {
     final db = await database;
     await db.close();
