@@ -77,7 +77,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     const SizedBox(width: 16),
                     Expanded(
                       child: _SummaryCard(
-                        title: 'Benim Karım',
+                        title: 'Benim Kârım',
                         amount: provider.myProfit,
                         icon: Icons.account_balance_wallet,
                         color: Colors.green,

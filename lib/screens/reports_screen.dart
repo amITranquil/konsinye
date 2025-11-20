@@ -90,7 +90,7 @@ class _GeneralReportTab extends StatelessWidget {
               ),
               const SizedBox(height: 12),
               _ReportCard(
-                title: 'Benim Toplam Karım',
+                title: 'Benim Toplam Kârım',
                 value: CurrencyFormatter.format(provider.myProfit),
                 icon: Icons.account_balance_wallet,
                 color: Colors.green,
