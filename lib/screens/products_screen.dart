@@ -80,7 +80,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                     children: [
                       const SizedBox(height: 8),
                       Text('Maliyet: ${CurrencyFormatter.format(product.costPrice)}'),
-                      Text('Satış: ${CurrencyFormatter.format(product.salePrice)} (${product.profitPercentage.toStringAsFixed(0)}% kar)'),
+                      Text('Satış: ${CurrencyFormatter.format(product.salePrice)} (${product.profitPercentage.toStringAsFixed(0)}% kâr)'),
                       Text('Stok: ${product.stockQuantity} adet'),
                       Text('Eklenme: ${DateFormatter.formatDate(product.createdAt)}'),
                     ],
@@ -161,7 +161,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
               TextField(
                 controller: profitController,
                 decoration: const InputDecoration(
-                  labelText: 'Kar Yüzdesi (%)',
+                  labelText: 'Kâr Yüzdesi (%)',
                   border: OutlineInputBorder(),
                 ),
                 keyboardType: const TextInputType.numberWithOptions(decimal: true),

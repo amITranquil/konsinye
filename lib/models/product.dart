@@ -18,13 +18,13 @@ class Product {
   // Satış fiyatını hesapla
   double get salePrice => costPrice * (1 + profitPercentage / 100);
 
-  // Toplam karı hesapla
+  // Toplam kârı hesapla
   double get totalProfit => salePrice - costPrice;
 
-  // Komşu payını hesapla (kar / 2)
+  // Komşu payını hesapla (kâr / 2)
   double get ownerShare => totalProfit / 2;
 
-  // Benim payımı hesapla (kar / 2)
+  // Benim payımı hesapla (kâr / 2)
   double get myShare => totalProfit / 2;
 
   // Komşuya ödenecek toplam tutar (maliyet + komşu payı)

@@ -173,8 +173,8 @@ class _ProductsReportTab extends StatelessWidget {
                       children: [
                         _InfoRow('Maliyet', CurrencyFormatter.format(product.costPrice)),
                         _InfoRow('Satış Fiyatı', CurrencyFormatter.format(product.salePrice)),
-                        _InfoRow('Kar Yüzdesi', '%${product.profitPercentage.toStringAsFixed(0)}'),
-                        _InfoRow('Kar Tutarı', CurrencyFormatter.format(product.totalProfit)),
+                        _InfoRow('Kâr Yüzdesi', '%${product.profitPercentage.toStringAsFixed(0)}'),
+                        _InfoRow('Kâr Tutarı', CurrencyFormatter.format(product.totalProfit)),
                         const Divider(),
                         _InfoRow(
                           'Komşu Payı (satış başı)',

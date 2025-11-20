@@ -83,7 +83,7 @@ class _SalesScreenState extends State<SalesScreen> {
                       Text('Maliyet: ${CurrencyFormatter.format(sale.costPrice)}'),
                       Text('Satış Fiyatı: ${CurrencyFormatter.format(sale.salePrice)}'),
                       Text('Toplam Gelir: ${CurrencyFormatter.format(sale.salePrice * sale.quantity)}'),
-                      Text('Kar: ${CurrencyFormatter.format(sale.profitAmount * sale.quantity)}'),
+                      Text('Kâr: ${CurrencyFormatter.format(sale.profitAmount * sale.quantity)}'),
                       const Divider(),
                       Text(
                         'Komşuya Ödenecek: ${CurrencyFormatter.format(sale.amountOwedToOwner * sale.quantity)}',
@@ -205,7 +205,7 @@ class _SalesScreenState extends State<SalesScreen> {
                           const SizedBox(height: 8),
                           Text('Maliyet: ${CurrencyFormatter.format(selectedProduct!.costPrice)}'),
                           Text('Satış Fiyatı: ${CurrencyFormatter.format(selectedProduct!.salePrice)}'),
-                          Text('Kar: ${CurrencyFormatter.format(selectedProduct!.totalProfit)}'),
+                          Text('Kâr: ${CurrencyFormatter.format(selectedProduct!.totalProfit)}'),
                           const Divider(),
                           Text(
                             'Komşu Payı: ${CurrencyFormatter.format(selectedProduct!.ownerShare)}',

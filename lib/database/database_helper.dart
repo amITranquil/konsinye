@@ -221,7 +221,7 @@ class DatabaseHelper {
 
   Future<double> getTotalOwnerShareFromSales() async {
     final db = await database;
-    // Komşuya ödenecek = Her satıştan (maliyet + komşu kar payı) * adet
+    // Komşuya ödenecek = Her satıştan (maliyet + komşu kâr payı) * adet
     final result = await db.rawQuery(
       'SELECT SUM((cost_price + owner_share) * quantity) as total FROM sales',
     );

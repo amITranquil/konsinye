@@ -23,7 +23,7 @@ class Sale {
     required this.myShare,
   });
 
-  // Komşuya bu satıştan ödenecek tutar (maliyet + komşu kar payı)
+  // Komşuya bu satıştan ödenecek tutar (maliyet + komşu kâr payı)
   double get amountOwedToOwner => costPrice + ownerShare;
 
   Map<String, dynamic> toMap() {
